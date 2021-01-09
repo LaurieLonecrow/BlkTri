@@ -1,0 +1,402 @@
+body {
+  margin: 0;
+  font-weight: 400;
+  font-family: "Work Sans", sans-serif;
+}
+
+/* ------------------------ Load Page ------------------------  */
+.load-container {
+  display: inline-block;
+  background-color: #212121;
+  width: 100%;
+  margin: 0;
+  height: 800px;
+  z-index: -2;
+  position: relative;
+}
+
+.load-container2 {
+  font-family: "Work Sans", sans-serif;
+  color: #f1f1f1;
+  font-weight: 900;
+  font-size: 80px;
+  letter-spacing: 100px;
+  text-decoration: none;
+  position: fixed; /* Stay fixed */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 100%;
+  padding: 0;
+  margin-left: 45px;
+  text-align: center;
+  background-color: transparent;
+  animation-name: title;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.load-container2:hover {
+  color: red;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 10px;
+  margin-left: 0;
+  animation-duration: 0s;
+}
+
+@keyframes title {
+  0% {
+    color: #212121;
+  }
+
+  17% {
+    color: #f1f1f1;
+  }
+
+  25% {
+    color: #212121;
+  }
+
+  37% {
+    color: #f1f1f1;
+  }
+
+  53% {
+    color: #212121;
+  }
+
+  67% {
+    color: #f1f1f1;
+  }
+
+  82% {
+    color: #212121;
+  }
+
+  91% {
+    color: #f1f1f1;
+  }
+}
+
+.tri1 {
+  display: inline-block;
+  width: 100%;
+  position: fixed;
+  animation-name: load;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  z-index: 2;
+  opacity: .5;
+}
+
+@keyframes load {
+  0% {
+    transform: rotate(0deg);
+    transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
+  }
+
+  50% {
+    transition: transform 0.7s cubic-bezier(1, 0.5, 0.5, 1);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.tri2 {
+  display: inline-block;
+  width: 100%;
+  background-size: cover;
+  position: fixed;
+  animation-iteration-count: infinite;
+  animation-name: load2;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  z-index: 1;
+  opacity: .5;
+}
+
+@keyframes load2 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.tri3 {
+  display: inline-block;
+  width: 100%;
+  background-size: cover;
+  position: fixed;
+  flex-wrap: wrap;
+  z-index: 0;
+}
+
+@media screen and (max-width: 700px) {
+  .tri1, .tri2, .tri3 {
+    padding-top: 30%;
+  }
+}
+
+/* ------------------------ Navbar ------------------------ */
+.logo {
+  font-family: "Work Sans", sans-serif;
+  line-height: 60px;
+  position: fixed;
+  float: left;
+  margin: 16px 46px;
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+nav {
+  font-family: "Work Sans", sans-serif;
+  position: fixed;
+  width: 100%;
+  line-height: 80px;
+  z-index: 3;
+}
+
+a:hover {
+  color: gray;
+}
+
+nav ul {
+  line-height: 60px;
+  list-style: none;
+  background: transparent;
+  overflow: hidden;
+  color: #000;
+  padding: 0;
+  text-align: right;
+  margin: 0;
+  padding-right: 40px;
+  transition: 1s;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 16px 40px;
+  ;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.25em;
+}
+
+.menu-icon {
+  line-height: 60px;
+  width: 100%;
+  background: #fff;
+  text-align: right;
+  box-sizing: border-box;
+  padding: 15px 24px;
+  cursor: pointer;
+  color: #000;
+  display: none;
+}
+
+nav.black .menu-icon{
+  background: #000;
+}
+
+nav.black ul {
+  background: #000;
+}
+
+nav.black ul li a {
+  color: #f1f1f1;
+}
+
+nav.black .logo {
+    color: #f1f1f1;
+}
+
+nav.black .fa {
+  color: #f1f1f1;
+}
+
+/* ------------------------ Home Page ------------------------ */
+.splash {
+  padding: 90px 5% 2%;
+  z-index: -1;
+  width: 100%;
+}
+
+.homeH1 {
+  text-align: center;
+  padding: 2%;
+  color:inherit;
+}
+
+.homeH1 a{
+  text-decoration: none;
+  color:inherit;
+}
+
+.homeH1 a:hover{
+  color: gray;
+}
+
+.scrollmenu, .scrollMenuOuter {
+  background-color: white;
+  overflow: auto;
+  white-space: nowrap;
+  padding-bottom: 5%;
+}
+
+.scrollmenu img:hover {
+  opacity: 0.4;
+}
+
+
+/* ------------------------ BlkTri Page ------------------------ */
+.about {
+  display: inline-block;
+  padding: 15%;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.25em;
+}
+
+/* ------------------------ Contact Page ------------------------ */
+
+.form {
+padding: 15% 20%;
+}
+
+.feedback-input {
+  color: #212121;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #212121;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus {
+  border:2px solid gray; }
+
+.textarea-contact {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background: #f1f1f1;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color: #212121;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover {
+  background: gray; }
+
+  /* ------------------------ Shop ------------------------ */
+
+.top-card-group {
+padding-top: 5em;
+}
+
+.card-shopPage {
+  padding: 1em;
+  border: none;
+  text-align: center;
+  animation: fadeIn 800ms normal forwards ease-in-out;
+}
+
+.card-title {
+  font-size: 1.55em;
+  color: #4f4e4e;
+}
+
+.card-img-top {
+  padding: 1em 2em;
+}
+
+.card:hover {
+opacity: 0.4
+}
+
+/* ------------------------ Products ------------------------ */
+.product {
+  padding-top: 150px;
+  font-family: "Work Sans", sans-serif;
+  color: gray;
+}
+
+
+/* ------------------------ @Media ------------------------ */
+@media(max-width: 786px) {
+  .logo {
+    position: fixed;
+    top: 0;
+    margin-top: 16px;
+  }
+
+  nav ul {
+    max-height: 0;
+    background: #000;
+  }
+
+  .showing {
+    max-height: 30em;
+  }
+
+  nav ul li {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 24px;
+    text-align: center;
+  }
+
+  nav ul li a {
+    color: #fff;
+    font-size: 2em;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .splash {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+.about {
+  padding: 25% 10%;
+}
+
+.form {
+  padding: 20% 10%;
+}
+}
