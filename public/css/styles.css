@@ -6,14 +6,14 @@ body {
 
 /* ------------------------ Load Page ------------------------  */
 .load-container {
-  display: inline-block;
   background-color: #212121;
   width: 100%;
-  margin: 0;
-  height: 800px;
-  z-index: -2;
-  position: relative;
+  height: 1024px;
+  z-index: 0;
 }
+ #myVideo {
+   width: 100%;
+ }
 
 .load-container2 {
   font-family: "Work Sans", sans-serif;
@@ -38,7 +38,7 @@ body {
 }
 
 .load-container2:hover {
-  color: red;
+  color: #8B0000;
   cursor: pointer;
   text-decoration: none;
   letter-spacing: 10px;
@@ -80,70 +80,6 @@ body {
   }
 }
 
-.tri1 {
-  display: inline-block;
-  width: 100%;
-  position: fixed;
-  animation-name: load;
-  animation-duration: 5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  z-index: 2;
-  opacity: .5;
-}
-
-@keyframes load {
-  0% {
-    transform: rotate(0deg);
-    transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
-  }
-
-  50% {
-    transition: transform 0.7s cubic-bezier(1, 0.5, 0.5, 1);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.tri2 {
-  display: inline-block;
-  width: 100%;
-  background-size: cover;
-  position: fixed;
-  animation-iteration-count: infinite;
-  animation-name: load2;
-  animation-duration: 5s;
-  animation-timing-function: linear;
-  z-index: 1;
-  opacity: .5;
-}
-
-@keyframes load2 {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(-360deg);
-  }
-}
-
-.tri3 {
-  display: inline-block;
-  width: 100%;
-  background-size: cover;
-  position: fixed;
-  flex-wrap: wrap;
-  z-index: 0;
-}
-
-@media screen and (max-width: 700px) {
-  .tri1, .tri2, .tri3 {
-    padding-top: 30%;
-  }
-}
 
 /* ------------------------ Navbar ------------------------ */
 .logo {
@@ -229,15 +165,9 @@ nav.black .fa {
 }
 
 /* ------------------------ Home Page ------------------------ */
-.splash {
-  padding: 90px 5% 2%;
-  z-index: -1;
-  width: 100%;
-}
-
 .homeH1 {
   text-align: center;
-  padding: 2%;
+  padding: 10% 2% 2%;
   color:inherit;
 }
 
@@ -356,6 +286,15 @@ opacity: 0.4
 
 /* ------------------------ @Media ------------------------ */
 @media(max-width: 786px) {
+
+  #myVideo {
+    padding-top: 50%;
+  }
+
+  .load-container2{
+margin-left: 5%;
+ }
+
   .logo {
     position: fixed;
     top: 0;
@@ -387,16 +326,15 @@ opacity: 0.4
     display: block;
   }
 
-  .splash {
-    padding-left: 0;
-    padding-right: 0;
-  }
+ .homeH1 {
+   padding-top: 25%;
+ }
 
 .about {
   padding: 25% 10%;
 }
 
 .form {
-  padding: 20% 10%;
+  padding: 25% 10%;
 }
 }
